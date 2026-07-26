@@ -176,7 +176,7 @@ li {
     align-items: center;
     justify-content: center;
     margin: 1px;
-    font-size: min(18px, 2.5vh);
+    font-size: min(18px, 1.25vw);
     text-wrap-mode: nowrap;
 }
 
