@@ -42,6 +42,14 @@ const root = document.documentElement.style;
             bgLightCol: "#353535",
             borderCol: "#bbbbbb",
             textCol: "#bbbbbb"
+        },
+        {
+            name: "green",
+            bgImage: "green.webp",
+            bgDarkCol: "#031701",
+            bgLightCol: "#092d01",
+            borderCol: "#93eb70",
+            textCol: "#a2cc90"
         }
     ];
 
