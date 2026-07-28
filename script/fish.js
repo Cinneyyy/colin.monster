@@ -296,7 +296,7 @@
         }
     ]);
 
-    const preSimulation = 512;
+    const preSimulation = 0;//512;
     for(let i = 0; i < preSimulation; i++) {
         bgCanvas.draw(true);
         fgCanvas.draw(true);
