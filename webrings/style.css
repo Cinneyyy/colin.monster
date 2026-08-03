@@ -3,3 +3,7 @@ map, h2, p {
     padding-top: var(--spacing);
     padding-bottom: var(--spacing);
 }
+
+map {
+    width: 20vw;
+}
