@@ -107,7 +107,7 @@ td {
 }
 
 button {
-    background-color: #00000000;
+    background-color: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -229,7 +229,7 @@ li {
 }
 
 #random-scheme-box {
-    background-image: url("img/color_table.png");
+    background-image: url("img/pride/rainbow.png");
     background-size: 100%;
     image-rendering: pixelated;
 }
