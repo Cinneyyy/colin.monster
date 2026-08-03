@@ -4,16 +4,24 @@ map, h2, p {
     padding-bottom: var(--spacing);
 }
 
-.ringimg {
+img {
+    image-rendering: pixelated;
+}
+
+.no-ai-ring {
     position: relative;
 }
 
-.ringimg > a {
+.no-ai-ring > a {
     display: block;
     position: absolute;
 }
 
-.ringimg > img {
+.no-ai-ring > img {
     width: 100%;
     height: 100%;
+}
+
+.bisexual-ring img {
+    height: 65px;
 }
