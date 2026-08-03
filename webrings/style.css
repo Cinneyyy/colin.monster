@@ -4,6 +4,16 @@ map, h2, p {
     padding-bottom: var(--spacing);
 }
 
-map {
-    width: 20vw;
+.ringimg {
+    position: relative;
+}
+
+.ringimg > a {
+    display: block;
+    position: absolute;
+}
+
+.ringimg > img {
+    width: 100%;
+    height: 100%;
 }

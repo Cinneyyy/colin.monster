@@ -15,7 +15,8 @@
         "Rock and Stone!",
         "No mind to think.",
         "Despite everything, it's still you.",
-        "I'm the original&emsp;&emsp;&emsp;<span style='color: yellow;'>Starwalker.</span>"
+        "I'm the original&emsp;&emsp;&emsp;<span style='color: yellow;'>Starwalker.</span>",
+        "<img src='/img/asset/button_ut-88x31.gif' style='width: 88px; height: 31px; margin-top: 9.5px; image-rendering: pixelated;'>"
     ];
 
     const seconds = 10;
