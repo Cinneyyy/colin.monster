@@ -1,0 +1,5 @@
+map, h2, p {
+    --spacing: 12px;
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
+}

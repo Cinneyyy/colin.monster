@@ -1,6 +1,6 @@
 let makeSnailEepy = false;
 
-(function () {
+{
     const canvas = document.createElement("canvas");
     canvas.style.position = "fixed";
     canvas.style.zIndex = "10";
@@ -69,4 +69,4 @@ let makeSnailEepy = false;
 
         window.requestAnimationFrame(draw);
     }
-})();
+}
