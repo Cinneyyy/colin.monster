@@ -27,7 +27,7 @@ let makeSnailEepy = false;
     canvas.style.height = displaySizeCss;
 
     const image = new Image();
-    image.src = "/img/snail.svg";
+    image.src = "/img/snail/snail.svg";
 
     let calledDraw = false;
     onmousemove = e => {

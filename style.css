@@ -208,3 +208,34 @@ li {
     width: 100%;
     margin-bottom: -5px;
 }
+
+.theme-select .box::before {
+    content: "__";
+}
+
+.theme-select .box {
+    background-color: var(--col);
+    color: transparent;
+    border: solid 2px var(--scheme-border-color);
+}
+
+.theme-select td {
+    background-color: var(--col);
+}
+
+.theme-select .padding {
+    background-color: transparent;
+    color: transparent;
+}
+
+#random-scheme-box {
+    background-image: url("img/color_table.png");
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+p {
+    padding-bottom: 4px;
+    padding-left: 2px;
+    margin-top: 2px;
+}
