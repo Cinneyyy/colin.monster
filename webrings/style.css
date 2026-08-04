@@ -8,20 +8,20 @@ img {
     image-rendering: pixelated;
 }
 
-.no-ai-ring {
+.link-map {
     position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
 }
 
-.no-ai-ring > a {
+.link-map > a {
     display: block;
     position: absolute;
 }
 
-.no-ai-ring > img {
+.link-map > img {
     width: 100%;
     height: 100%;
-}
-
-.bisexual-ring img {
-    height: 65px;
+    display: inline-block;
 }
