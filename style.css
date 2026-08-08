@@ -135,7 +135,7 @@ button {
 }
 
 .image-list-widget > img {
-    --size: 200px;
+    --size: 230px;
     width: var(--size);
     height: var(--size);
     object-fit: cover;
