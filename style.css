@@ -75,6 +75,7 @@ html {
 
 body {
     border: solid 4px var(--scheme-border-color);
+    border-radius: 4px;
 
     background: radial-gradient(circle at 50% 50%, var(--scheme-bg-light-color), var(--scheme-bg-dark-color) 90%);
 
@@ -100,6 +101,7 @@ table {
 
 .border, td {
     border: solid 2px var(--scheme-border-color);
+    border-radius: 4px;
 }
 
 td {
