@@ -241,3 +241,7 @@ p {
     padding-left: 2px;
     margin-top: 2px;
 }
+
+#frens > a > img {
+    width: 32px;
+}
