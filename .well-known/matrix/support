@@ -1,0 +1,9 @@
+{
+    "contacts": [
+        {
+            "email_address": "support@colin.monster",
+            "matrix_id": "@support:colin.monster",
+            "role": "m.role.admin"
+        }
+    ]
+}
