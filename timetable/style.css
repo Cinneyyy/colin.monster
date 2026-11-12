@@ -1,0 +1,17 @@
+th {
+    height: 50px;
+}
+
+td {
+    height: 120px;
+}
+
+table {
+    border-spacing: 10px;
+    margin-top: -10px;
+}
+
+.time-of-day {
+    border: none;
+    width: 100px;
+}
