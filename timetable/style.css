@@ -1,17 +1,143 @@
-th {
-    height: 50px;
+:root {
+    --scheme-border-color: white;
+    --scheme-text-color: white;
+    --border-w: 0.33vh;
+    --border-r: 0.66vh;
 }
 
-td {
-    height: 120px;
+#weekdays {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
 }
 
-table {
-    border-spacing: 10px;
-    margin-top: -10px;
+#weekdays > div {
+    flex: 1;
+
+    height: 99%;
+    width: 0%;
+
+    margin-left: 0.25vh;
+    margin-right: 0.25vh;
+
+    border: var(--border-w) solid var(--scheme-border-color);
+    border-radius: var(--border-r);
 }
 
-.time-of-day {
-    border: none;
-    width: 100px;
+#timetable-content {
+    width: 100%;
+    height: 94.5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2vh;
+
+    border-bottom: var(--border-w) solid var(--scheme-border-color);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    width: calc(100vw - 10vh);
+    height: 90vh;
+
+    border-width: var(--border-w);
+    border-radius: var(--border-r);
+
+    padding: 0.5vh;
+
+    display: flex;
+}
+
+.event-container {
+    display: block;
+    position: relative;
+    align-content: center;
+    width: 100%;
+}
+
+.event {
+    border: var(--border-w) solid var(--scheme-border-color);
+    border-radius: 0;
+
+    height: 4vh;
+
+    width: calc(100% - 1.5vh);
+    left: calc(1.5vh / 4);
+
+    position: absolute;
+    display: block;
+}
+
+.event * {
+    text-wrap-mode: nowrap;
+    font-size: 1.5vh;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.event .name {
+    text-align: center;
+}
+
+.event .time {
+    text-align: left;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.event .room {
+    text-align: right;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 70%;
+}
+
+#controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 4vh;
+    bottom: 5vh;
+
+    width: calc(100vw - 10vh - 1.25vh);
+    left: 5.25vh;
+
+    border: var(--border-w) solid var(--scheme-border-color);
+    border-radius: var(--border-r);
+}
+
+#date-display {
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+#controls button {
+    height: 2vh;
+    font-size: 2vh;
+    margin-top: -0.33vh;
+}
+
+#prev {
+    margin-left: 1vh;
+}
+
+#next {
+    margin-right: 1vh;
 }
