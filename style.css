@@ -33,7 +33,7 @@
     --scheme-text-color: white;
     --scheme-bg-dark-color: black;
     --scheme-bg-light-color: black;
-    --scheme-bg-image: none; 
+    --scheme-bg-image: none;
     --list-style: square;
     --list-marker-width: 0em;
     --waow-font: papyrus;
@@ -67,10 +67,6 @@ html {
     background-image: var(--scheme-bg-image);
     background-size: cover;
     background-repeat: repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body {
