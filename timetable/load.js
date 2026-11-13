@@ -14,8 +14,8 @@ function parseDateTime(dt) {
     }
 
     const year = parseInt(dateTime.substring(0, 4));
-    const month = parseInt(dateTime.substring(4, 6))-1;
-    const day = parseInt(dateTime.substring(6, 8))-1;
+    const month = parseInt(dateTime.substring(4, 6));
+    const day = parseInt(dateTime.substring(6, 8));
 
     const hour = parseInt(dateTime.substring(9, 11));
     const min = parseInt(dateTime.substring(11, 13));
@@ -48,7 +48,7 @@ function parseEvent(summary, location, dateTime, repeat, exemptions, events) {
             // .includes might work here, but I cannot be bothered to check rn.
             if(exemptionsParsed.findIndex(e => e.year === timeParsed.year && e.month === timeParsed.month && e.day === timeParsed.day) === -1) {
                 const evt = {
-                    date: generateDateObj(new Date(timeParsed.year, timeParsed.month, timeParsed.day)),
+                    date: generateDateObj(new Date(timeParsed.year, timeParsed.month-1, timeParsed.day)),
                     time: {
                         hour: timeParsed.hour,
                         min: timeParsed.min,
@@ -61,8 +61,9 @@ function parseEvent(summary, location, dateTime, repeat, exemptions, events) {
             }
 
             timeParsed.day += 7;
-            if(timeParsed.day > daysInMonth(timeParsed.month, timeParsed.year)) {
-                timeParsed.day -= daysInMonth(timeParsed.month, timeParsed.year);
+            const numDaysInMonth = daysInMonth(timeParsed.month-1, timeParsed.year);
+            if(timeParsed.day > numDaysInMonth) {
+                timeParsed.day -= numDaysInMonth;
 
                 if(timeParsed.month == 12-1) {
                     timeParsed.month = 0;
@@ -76,7 +77,7 @@ function parseEvent(summary, location, dateTime, repeat, exemptions, events) {
     }
     else {
         const evt = {
-            date: generateDateObj(new Date(timeParsed.year, timeParsed.month, timeParsed.day)),
+            date: generateDateObj(new Date(timeParsed.year, timeParsed.month-1, timeParsed.day)),
             time: {
                 hour: timeParsed.hour,
                 min: timeParsed.min,
@@ -139,7 +140,7 @@ async function loadWebCal(id, events) {
             currRepeat = cal[i].substring(cal[i].indexOf(":")+1);
         }
         else if(cal[i].startsWith("EXDATE")) {
-            currExemptions.push(cal[i].substring(cal[i].indexOf(";")));
+            currExemptions.push(cal[i].substring(cal[i].indexOf(";")+1));
         }
     }
 
@@ -212,9 +213,7 @@ function daysInMonth(month, year) {
 }
 
 function getNextWeek(date) {
-    const jsDate = new Date(date.year, date.month, date.day);
-    jsDate.setDate(jsDate.getDate() + 7);
-    return generateDateObj(jsDate);
+    return generateDateObj(new Date(date.year, date.month, date.day + 7));
 }
 
 function getMonthName(month) {
@@ -248,6 +247,8 @@ function writeWeekData(newDate) {
     now = newDate;
     today = generateDateObj(now);
     weekStart = getWeekStartDateObj(now);
+    console.log(today);
+    console.log(weekStart);
 }
 
 writeWeekData(new Date());
